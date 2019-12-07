@@ -1,0 +1,143 @@
+@import "__variables.scss";
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Playfair+Display|Roboto:300,400,700&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    text-align: center;
+    color:$lightGray;
+    margin: 15vw 0 10vw 0;
+}
+.navbar{
+    background-color: $messBlue;
+    box-shadow: 0 0 5px black;
+    margin: 5vw 3vw;
+    &__list{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin: 0 5vw;
+    }
+    &__option{
+        color:white;
+        padding: 2vw 0;
+        font-size: 10px;
+        font-weight: 300;
+    }
+}
+.card{
+    background-color: $lightWhite;
+    box-shadow: 0 0 5px black;
+    margin: 0 auto;
+    width: 90vw;
+    &__photo{
+        padding: 5vw;
+        // float: left;
+        text-align: center;
+    }
+    &__photo img{
+        // border: 2px solid $messBlue;
+        width: 150px;
+    }
+    &__title{
+        font-size: 20px;
+        text-align: left;
+        font-weight: bold;
+        padding: 3vw;
+        font-weight: 300;
+    }
+    &__name{
+        font-weight: 700;
+    }
+    &__info{
+        padding-left: 10px;
+    }
+    &__social{
+        background-color: $messBlue;
+    }
+    &__list{
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        margin-top: 1vw;
+    }
+    &__option{
+        margin: 0 auto;
+        padding: 5vh 0 4vh 0;
+    }
+    &__option img{
+        width: 40px;
+    }
+    &__textInfo-left{
+        display: block;
+        width: 100%;
+        float:left;
+        padding-bottom: 5px;
+        font-weight: 700;
+    }
+    &__textInfo{
+        display: block;
+        font-weight: 400;
+        color: $lightGray;
+        width: 100%;
+        padding-bottom: 15px;
+        // margin-left: 60px;
+    }
+}
+.cv{
+    width: 80vw;
+    margin: 0 auto;
+    &__linkBlock{
+        width: 150px;
+        height: 50px;
+        // background-color: $messBlue;
+        border: 1px solid $messBlue;
+        margin: 5vw auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__link{
+        color:$messBlue;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    &__text{
+        font-size: 25px;
+        font-weight: 200;
+        line-height: 125%;
+        text-align: center;
+    }
+}
+.myskills{
+    &__board{
+        width: 90vw;
+        margin: 0 auto;
+        background-color: $lightWhite;
+        box-shadow: 0 0 5px black;
+    }
+    &__list{
+     list-style: none;
+     margin-left: 20px; 
+    }
+    &__option{
+        padding: 15px 0;
+    }
+
+    &__progress{
+        position: relative;
+        background-color: $lightGray;
+        width: 60%;
+        height: 8px;
+        margin: 0 120px;
+    }
+    &__textLeft{
+        float: left;
+        padding-bottom: 5px;
+        font-weight: 700;
+    }
+}
