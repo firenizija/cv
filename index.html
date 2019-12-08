@@ -18,14 +18,24 @@
             <img class="navbar__burger" src="img/closeburger.svg" alt="">
         </div>
         <ul class="navbar__list">
-            <li class="navbar__option">Start</li>
-            <li class="navbar__option">Moje umiejętności</li>
-            <li class="navbar__option">Co potrafię</li>
-            <li class="navbar__option">Portfolio</li>
-            <li class="navbar__option">Kontakt</li>
+            <a href="#start">
+                <li class="navbar__option">Start</li>
+            </a>
+            <a href="#skills">
+                <li class="navbar__option">Moje umiejętności</li>
+            </a>
+            <a href="#slider">
+                <li class="navbar__option">Co potrafię</li>
+            </a>
+            <a href="#portfolio">
+                <li class="navbar__option">Portfolio</li>
+            </a>
+            <a href="#contact">
+                <li class="navbar__option">Kontakt</li>
+            </a>
         </ul>
     </nav>
-    <section class="card">
+    <section id="start" class="card">
         <div class="card__photo">
             <img src="img/avatar.jpg" alt="">
         </div>
@@ -61,7 +71,7 @@
     </section>
     <section class="cv">
         <div class="cv__linkblock">
-            <a href="" class="cv__link">Pobierz CV</a>
+            <a href="files/cv.pdf" class="cv__link" download>Pobierz CV</a>
         </div>
         <div class="cv__text">
             Cześć! Nazywam się Piotr Jaworski i jestem początkującym front end developerem. Szukam pracy w której będę
@@ -69,7 +79,7 @@
             wyzwania.
         </div>
     </section>
-    <section class="myskills">
+    <section id="skills" class="myskills">
         <h1>Moje umiejętności</h1>
         <div class="myskills__board">
             <ul class="myskills__list">
@@ -92,13 +102,13 @@
             </ul>
         </div>
     </section>
-    <section class="slider">
+    <section id="slider" class="slider">
         <h1>Co potrafię</h1>
         <div class="slider__content">
-            <img src="img/pcservice.svg" alt="">
+            <img class="slider__img" src="img/pcservice.svg" alt="">
         </div>
     </section>
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <h1>Portfolio</h1>
         <ul class="portfolio__list">
             <li class="portfolio__option">
@@ -119,7 +129,7 @@
             </li>
         </ul>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact">
         <h1>Kontakt</h1>
         <div class="contact__form">
             <div class="contact__title">Wyślij mi wiadomość</div>
