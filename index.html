@@ -27,14 +27,14 @@
             <div class="card__title">
                 Nazywam się <span class="card__name">Piotr Jaworski</span>
             </div>
-            <strong class="card__textInfo-left">Lat</strong>
-            <span class="card__textInfo">19</span>
-            <strong class="card__textInfo-left">Adres</strong>
-            <span class="card__textInfo">Żuków 35b</span>
-            <strong class="card__textInfo-left">Email</strong>
-            <span class="card__textInfo">p.jaworski1402@gmail.com</span>
-            <strong class="card__textInfo-left">Telefon</strong>
-            <span class="card__textInfo">608-423-576</span>
+            <strong class="card__textinfo-left">Lat</strong>
+            <span class="card__textinfo">19</span>
+            <strong class="card__textinfo-left">Adres</strong>
+            <span class="card__textinfo">Żuków 35b</span>
+            <strong class="card__textinfo-left">Email</strong>
+            <span class="card__textinfo">p.jaworski1402@gmail.com</span>
+            <strong class="card__textinfo-left">Telefon</strong>
+            <span class="card__textinfo">608-423-576</span>
         </div>
         <div class="card__social">
             <ul class="card__list">
@@ -54,7 +54,7 @@
         </div>
     </section>
     <section class="cv">
-        <div class="cv__linkBlock">
+        <div class="cv__linkblock">
             <a href="" class="cv__link">Pobierz CV</a>
         </div>
         <div class="cv__text">
@@ -68,19 +68,19 @@
         <div class="myskills__board">
             <ul class="myskills__list">
                 <li class="myskills__option">
-                    <strong class="myskills__textLeft">HTML</strong>
+                    <strong class="myskills__textleft">HTML</strong>
                     <div class="myskills__progress"></div>
                 </li>
                 <li class="myskills__option">
-                    <strong class="myskills__textLeft">CSS</strong>
+                    <strong class="myskills__textleft">CSS</strong>
                     <div class="myskills__progress"></div>
                 </li>
                 <li class="myskills__option">
-                    <strong class="myskills__textLeft">JavaScript</strong>
+                    <strong class="myskills__textleft">JavaScript</strong>
                     <div class="myskills__progress"></div>
                 </li>
                 <li class="myskills__option">
-                    <strong class="myskills__textLeft">React</strong>
+                    <strong class="myskills__textleft">React</strong>
                     <div class="myskills__progress"></div>
                 </li>
             </ul>
@@ -89,23 +89,40 @@
     <section class="slider">
         <h1>Co potrafię</h1>
         <div class="slider__content">
-
+            <img src="img/ctf.png" alt="">
         </div>
     </section>
     <section class="portfolio">
         <h1>Portfolio</h1>
-        <div class="portfolio__infinigy">
-
-        </div>
-        <div class="portfolio__kgw">
-
-        </div>
-        <div class="portfolio__x">
-
-        </div>
+        <ul class="portfolio__list">
+            <li class="portfolio__option">
+                <img src="img/infinigy.svg" alt="">
+                <div class="portfolio__button">Sprawdź</div>
+            </li>
+            <li class="portfolio__option">
+                <img src="img/infinigy.svg" alt="">
+                <div class="portfolio__button">Sprawdź</div>
+            </li>
+            <li class="portfolio__option">
+                <img src="img/infinigy.svg" alt="">
+                <div class="portfolio__button">Sprawdź</div>
+            </li>
+        </ul>
     </section>
     <section class="contact">
         <h1>Kontakt</h1>
+        <div class="contact__form">
+            <div class="contact__title">Wyślij mi wiadomość</div>
+            <form method="POST" action="send-mail.php">
+                Twój mail <br>
+                <input type="email"> <br>
+                Temat <br>
+                <input type="text"> <br>
+                Treść <br>
+                <textarea name="" id="" cols="30" rows="10"></textarea><br>
+                <input type="submit" value="Wyślij" class="contact__send">
+            </form>
+        </div>
         <nav>
             <ul class="contact__list">
                 <li class="contact__option">
