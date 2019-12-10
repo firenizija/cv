@@ -34,7 +34,7 @@ h1{
     position: fixed;
     z-index: 100;
     top:0;
-    background-color: $messBlue;
+    background-color: transparent;
     transition: background-color .5s;
     width: 100vw;
     // box-shadow: 0 0 5px black;
@@ -43,6 +43,7 @@ h1{
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        display: none;
     }
     &__option{
         color:white;
@@ -157,6 +158,7 @@ h1{
         margin: 0 auto;
         background-color: $lightWhite;
         box-shadow: 0 0 5px black;
+        text-align: center;
     }
     &__list{
      list-style: none;
@@ -164,19 +166,53 @@ h1{
     }
     &__option{
         padding: 15px 0;
+        display: flex;
+        justify-content: space-between;
     }
 
     &__progress{
         position: relative;
         background-color: $lightGray;
-        width: 60%;
+        width: 50%;
         height: 8px;
-        margin: 0 120px;
+        // margin: 0 120px;
+        margin-right: 20px; 
+    }
+    &__percentage{
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background-color: $messBlue;
+    }
+    &__value{
+        position: absolute;
+        color: $messBlue;
+        text-align: center;
+        width: 100%;
+        top: 95%;
     }
     &__textleft{
         float: left;
         padding-bottom: 5px;
         font-weight: 700;
+    }
+    &__buttondiv{
+        margin-top: 15px;
+        // border: 1px solid $messBlue;
+    }
+    &__button{
+        // border: 1px solid $messBlue;
+        color: $messBlue;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+    }
+    &__data{
+        margin: 0 auto;
+        width: 60vw;
+    }
+    &__tech{
+        // list-style: decimal;
     }
 }
 .slider{
@@ -200,6 +236,11 @@ h1{
     }
     &__option{
         padding: 5vw;
+        flex-basis: 200px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
     & img{
         height: 100px;
@@ -208,8 +249,13 @@ h1{
         text-align: center;
         border: 1px solid $messBlue;
         color: $messBlue;
-        padding: 3vw 0;
+        padding: 25px 0;
+        width: 100%;
         font-weight: 600;
+    }
+    &__text{
+        text-align: center;
+        margin: 20px -20px;
     }
 }
 
@@ -263,6 +309,8 @@ h1{
         &__list{
             justify-content: space-evenly;
             flex-direction: row;
+            display: flex;
+            background-color: $messBlue;
         }
         &__option{
             width: auto;
@@ -296,10 +344,32 @@ h1{
             width: 70%;
             padding: 3vw
         }
+        &__textleft{
+            float: left;
+            padding-bottom: 5px;
+            font-weight: 700;
+            font-size: 20px;
+        }
     }
     .slider{
         &__content{
             width: 55%;
+        }
+    }
+.contact{
+        &__list{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            list-style: none;
+            margin-top: 1vw;
+        }
+        &__form{
+            width: 30vw;
+            padding: .1vw 1vw;
+        }
+        &__title{
+            margin: 3vw 0;
         }
     }
 }

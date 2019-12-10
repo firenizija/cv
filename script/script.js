@@ -1,5 +1,5 @@
 //navbar
-let navbarStatus = false;
+let navbarStatus = true;
 $(".navbar__burger").click(() => {
     if (navbarStatus) {
         showMenu();
@@ -27,7 +27,7 @@ function showMenu() {
     });
 }
 //slider
-const slides = ["pcservice.svg", "frontendslide.svg", "RTS.svg"];
+const slides = ["pcservice.svg", "frontendslide.svg", "ctfslide.svg"];
 let i = 0;
 setInterval(() => {
 
@@ -35,3 +35,4 @@ setInterval(() => {
     i++;
     if (i > slides.length - 1) i = 0;
 }, 5500);
+//at start
