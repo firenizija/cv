@@ -9,7 +9,9 @@ $(".navbar__burger").click(() => {
     }
 })
 $(".navbar__option").click(() => {
-    hideMenu();
+    if (window.innerWidth < 500) {
+        hideMenu();
+    }
 });
 function hideMenu() {
     $(".navbar__burger").attr("src", "img/burger.svg");
