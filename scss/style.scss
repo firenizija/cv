@@ -32,10 +32,11 @@ h1{
 .navbar{
     // margin: 5vw 0;
     position: fixed;
-    z-index: 100;
+    z-index: 5;
     top:0;
     background-color: transparent;
     transition: background-color .5s;
+    transition: opacity .1s;
     width: 100vw;
     // box-shadow: 0 0 5px black;
     &__list{
@@ -53,6 +54,7 @@ h1{
         text-align: center;
         width: 100vw;
         border-bottom: 1px solid black;
+        transition: padding .1s;
     }
     &__burger{
         margin-left: 85vw;
@@ -139,6 +141,7 @@ h1{
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: background-color .1s;
     }
     &__link{
         color:$messBlue;
@@ -159,6 +162,8 @@ h1{
         background-color: $lightWhite;
         box-shadow: 0 0 5px black;
         text-align: center;
+        position: relative;
+        z-index: 1;
     }
     &__list{
      list-style: none;
@@ -183,6 +188,18 @@ h1{
         width: 50%;
         height: 100%;
         background-color: $messBlue;
+    }
+    &__percentage--1{
+        width: 89%;
+    }
+    &__percentage--2{
+        width: 72%;
+    }
+    &__percentage--3{
+        width: 62%;
+    }
+    &__percentage--4{
+        width: 34%;
     }
     &__value{
         position: absolute;
@@ -212,7 +229,26 @@ h1{
         width: 60vw;
     }
     &__tech{
-        // list-style: decimal;
+        background-color: #f3f3f3;
+        box-shadow: 0 0 5px black;
+        padding: 1vw;
+        list-style: none;
+        display: none;
+    }
+    &__tech li{
+        padding: 10px;
+    }
+    &__logo{
+        width: 100px;
+    }
+    &__red{
+        color:red;
+    }
+    &__yellow{
+        color:rgb(192, 192, 0);
+    }
+    &__green{
+        color:green;
     }
 }
 .slider{
@@ -252,6 +288,12 @@ h1{
         padding: 25px 0;
         width: 100%;
         font-weight: 600;
+        transition: background-color .1s;
+    }
+    & a{
+        transition: background-color .1s;
+        text-decoration: none;
+        color:$messBlue;
     }
     &__text{
         text-align: center;
@@ -290,6 +332,7 @@ h1{
         color: $messBlue;
         font-weight: 600;
         margin-left: 25%;
+        transition: background-color .1s;
     }
     & input, textarea{
         margin-bottom: 3vw;
@@ -302,6 +345,7 @@ h1{
     }
 }
 @media (min-width: 500px){
+    
     h1{
         margin: 8vw 0 3vw 0;
     }
@@ -316,6 +360,31 @@ h1{
             width: auto;
             border-bottom: none;
         }
+        & a  {
+            position: relative;
+            color: #000;
+            text-decoration: none;
+            }
+        & a:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            top: 65%;
+            left: 0;
+            background-color: white;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out 0s;
+        }
+        & a:hover:before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+h2 > a:hover {
+  color: #000;
+}
         &__top{
             display: none;
         }
@@ -339,6 +408,13 @@ h1{
             padding:50px 0;
         }
     }
+    .cv{
+        &__linkblock:hover>a,&__linkblock:hover{
+            background-color: $messBlue;
+            color: white;
+            cursor: pointer;
+        }
+    }
     .myskills{
         &__board{
             width: 70%;
@@ -356,6 +432,13 @@ h1{
             width: 55%;
         }
     }
+    .portfolio{
+        &__button:hover>a,&__button:hover{
+            background-color: $messBlue;
+            color: white;
+            cursor: pointer;
+        }
+    }
 .contact{
         &__list{
             display: flex;
@@ -365,11 +448,16 @@ h1{
             margin-top: 1vw;
         }
         &__form{
-            width: 30vw;
+            width: 500px;
             padding: .1vw 1vw;
         }
         &__title{
             margin: 3vw 0;
+        }
+        &__send:hover>a,&__send:hover{
+            background-color: $messBlue;
+            color: white;
+            cursor: pointer;
         }
     }
 }

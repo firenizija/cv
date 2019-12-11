@@ -13,11 +13,32 @@ $(".navbar__option").click(() => {
         hideMenu();
     }
 });
+window.onscroll = () => {
+    minimalizeNav();
+}
+$(".navbar").mouseover(() => {
+    $(".navbar").css("opacity", "1");
+}).mouseleave(() => {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        $(".navbar").css("opacity", "0.5");
+    }
+});
+function minimalizeNav() {
+    if (window.innerWidth > 500) {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            $(".navbar__option").css("padding", ".5vw 0");
+            $(".navbar").css("opacity", ".5");
+        }
+        else {
+            $(".navbar__option").css("padding", "2vw 0");
+            $(".navbar").css("opacity", "1");
+        }
+    }
+}
 function hideMenu() {
     $(".navbar__burger").attr("src", "img/burger.svg");
     $(".navbar__list").slideToggle("slow", () => {
-        $(".navbar").css("backgroundColor", "transparent");
-        $(".navbar").fadeIn("fast");
+        $(".navbar").css("backgroundColor", "transparent").fadeIn("fast");
         navbarStatus = !navbarStatus;
     });
 }
@@ -37,4 +58,11 @@ setInterval(() => {
     i++;
     if (i > slides.length - 1) i = 0;
 }, 5500);
+//skills
+$(".myskills__button").click(() => {
+    $(".myskills__tech").slideToggle();
+});
 //at start
+$('document').ready(() => {
+    minimalizeNav();
+})
