@@ -51,13 +51,37 @@ function showMenu() {
 }
 //slider
 const slides = ["pcservice.svg", "frontendslide.svg", "ctfslide.svg"];
-let i = 0;
+let currentSlide = 0;
+let j = 0;
 setInterval(() => {
-
-    $(".slider__img").attr("src", "img/" + slides[i]);
-    i++;
-    if (i > slides.length - 1) i = 0;
-}, 5500);
+    $(".slider__progress").css("width", j + "%");
+    if (j >= 100) {
+        j = 0;
+        currentSlide++;
+        $(".slider__current").css("font-size", "3vw");
+        $(".slider__" + currentSlide).css("font-size", "3.5vw");
+        $(".slider__img").attr("src", "img/" + slides[currentSlide]);
+        if (currentSlide >= slides.length - 1) currentSlide = -1;
+    }
+    else {
+        j += 0.4;
+    }
+}, 50);
+$(".slider__0").mouseover(() => {
+    $(".slider__img").attr("src", "img/" + slides[0]);
+    $(".slider__current").css("font-size", "3vw");
+    $(".slider__" + 0).css("font-size", "3.5vw");
+});
+$(".slider__1").mouseover(() => {
+    $(".slider__img").attr("src", "img/" + slides[1]);
+    $(".slider__current").css("font-size", "3vw");
+    $(".slider__" + 1).css("font-size", "3.5vw");
+});
+$(".slider__2").mouseover(() => {
+    $(".slider__img").attr("src", "img/" + slides[2]);
+    $(".slider__current").css("font-size", "3vw");
+    $(".slider__" + 2).css("font-size", "3.5vw");
+});
 //skills
 $(".myskills__button").click(() => {
     $(".myskills__tech").slideToggle();
