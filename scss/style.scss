@@ -129,6 +129,9 @@ h1{
         padding-bottom: 15px;
         // margin-left: 60px;
     }
+    & a{
+        color: $messBlue;
+    }
 }
 .cv{
     width: 80vw;
@@ -274,6 +277,9 @@ h1{
     &__current{
         margin: 0 10px;
     }
+    &__0{
+        font-size: 3.5vw;
+    }
 }
 
 .portfolio{
@@ -384,7 +390,7 @@ h1{
             position: absolute;
             width: 100%;
             height: 2px;
-            top: 65%;
+            top: 70%;
             left: 0;
             background-color: white;
             visibility: hidden;
@@ -395,10 +401,6 @@ h1{
             visibility: visible;
             transform: scaleX(1);
         }
-
-h2 > a:hover {
-  color: #000;
-}
         &__top{
             display: none;
         }
