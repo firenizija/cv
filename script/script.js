@@ -56,11 +56,11 @@ let j = 0;
 setInterval(() => {
     $(".slider__progress").css("width", j + "%");
     if (j >= 100) {
-        j = 0;
         currentSlide++;
+        $(".slider__img").attr("src", "img/" + slides[currentSlide]);
         $(".slider__current").css("font-size", "3vw");
         $(".slider__" + currentSlide).css("font-size", "3.5vw");
-        $(".slider__img").attr("src", "img/" + slides[currentSlide]);
+        j = 0;
         if (currentSlide >= slides.length - 1) currentSlide = -1;
     }
     else {
@@ -68,19 +68,23 @@ setInterval(() => {
     }
 }, 50);
 $(".slider__0").mouseover(() => {
-    $(".slider__img").attr("src", "img/" + slides[0]);
+    currentSlide = 0;
+    $(".slider__img").attr("src", "img/" + slides[currentSlide]);
     $(".slider__current").css("font-size", "3vw");
     $(".slider__" + 0).css("font-size", "3.5vw");
 });
 $(".slider__1").mouseover(() => {
-    $(".slider__img").attr("src", "img/" + slides[1]);
+    currentSlide = 1;
+    $(".slider__img").attr("src", "img/" + slides[currentSlide]);
     $(".slider__current").css("font-size", "3vw");
     $(".slider__" + 1).css("font-size", "3.5vw");
 });
 $(".slider__2").mouseover(() => {
-    $(".slider__img").attr("src", "img/" + slides[2]);
+    currentSlide = 2;
+    $(".slider__img").attr("src", "img/" + slides[currentSlide]);
     $(".slider__current").css("font-size", "3vw");
     $(".slider__" + 2).css("font-size", "3.5vw");
+    currentSlide = 0;
 });
 //skills
 $(".myskills__button").click(() => {

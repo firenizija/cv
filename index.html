@@ -92,7 +92,7 @@
     </section>
     <section class="cv">
         <div class="cv__linkblock">
-            <a href="files/cv.pdf" class="cv__link" download>Pobierz CV</a>
+            <a href="files/cv.pdf" class="cv__link" download id="download">Pobierz CV</a>
         </div>
         <div class="cv__text">
             Cześć! Nazywam się Piotr Jaworski i jestem początkującym front end developerem. Szukam pracy w której będę
@@ -142,9 +142,9 @@
         <div class="myskills__data">
             <ul class="myskills__tech">
                 <li>
-                    <span class="myskills__green">&#9679;-Zakończone</span>
-                    <span class="myskills__yellow">&#9679;-W trakcie</span>
-                    <span class="myskills__red">&#9679;-Planowane</span>
+                    <span class="myskills__green">&#9679;-Zakończone</span><br>
+                    <span class="myskills__yellow">&#9679;-W trakcie</span><br>
+                    <span class="myskills__red">&#9679;-Planowane</span><br>
                 </li>
                 <img class="myskills__logo" src="https://www.vectorlogo.zone/logos/udemy/udemy-ar21.svg" alt="">
                 <li>
@@ -270,14 +270,16 @@
                 <div class="portfolio__text">
                     Zaplanuj swój dzień łatwo i przyjemnie z PLAnNER!
                 </div>
-                <div class="portfolio__button"><a href="" target="_blank">Sprawdź</a></div>
+                <div class="portfolio__button"><a href="https://github.com/firenizija/planner"
+                        target="_blank">Sprawdź</a></div>
             </li>
             <li class="portfolio__option">
                 <img src="img/RTS.svg" alt="">
                 <div class="portfolio__text">
                     Losowanie drużyn do gry Minecraft.
                 </div>
-                <div class="portfolio__button"><a href="" target="_blank">Sprawdź</a></div>
+                <div class="portfolio__button"><a href="https://firenizija.github.io/teams/" target="_blank">Sprawdź</a>
+                </div>
             </li>
         </ul>
     </section>
@@ -287,11 +289,11 @@
             <div class="contact__title">Wyślij mi wiadomość</div>
             <form method="POST" action="send-mail.php">
                 Twój mail <br>
-                <input type="email"> <br>
+                <input name="myMail" type="email" placeholder="user@example.com"> <br>
                 Temat <br>
-                <input type="text"> <br>
+                <input name="subject" type="text" placeholder="Dokąd tupta nocą jeż?"> <br>
                 Treść <br>
-                <textarea name="" id="" cols="30" rows="10"></textarea><br>
+                <textarea name="mailText" id="" cols="30" rows="10" placeholder="O to jest pytanie"></textarea><br>
                 <input type="submit" value="Wyślij" class="contact__send">
             </form>
         </div>
