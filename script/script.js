@@ -9,7 +9,7 @@ $(".navbar__burger").click(() => {
     }
 })
 $(".navbar__option").click(() => {
-    if (window.innerWidth < 500) {
+    if (window.innerWidth < 680) {
         hideMenu();
     }
 });
@@ -24,7 +24,7 @@ $(".navbar").mouseover(() => {
     }
 });
 function minimalizeNav() {
-    if (window.innerWidth > 500) {
+    if (window.innerWidth > 680) {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             $(".navbar__option").css("padding", ".5vw 0");
             $(".navbar").css("opacity", ".5");
